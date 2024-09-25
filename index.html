@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Management System - Login</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Login Section -->
+    <section id="login-section">
+        <h1>Login to Library Management System</h1>
+
+        <div class="login-container">
+            <div class="login-card" id="admin-login">
+                <h2>Admin Login</h2>
+                <input type="text" id="admin-username" placeholder="Enter Admin Username">
+                <input type="password" id="admin-password" placeholder="Enter Admin Password">
+                <button onclick="login('admin')">Login as Admin</button>
+            </div>
+
+            <div class="login-card" id="user-login">
+                <h2>User Login</h2>
+                <input type="text" id="user-username" placeholder="Enter Username">
+                <input type="password" id="user-password" placeholder="Enter Password">
+                <button onclick="login('user')">Login as User</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Library Management System -->
+    <section id="library-section" style="display: none;">
+        <header>
+            <h1>Library Management System</h1>
+        </header>
+
+        <section id="search-section">
+            <h2>Search for Books</h2>
+            <input type="text" id="searchBar" placeholder="Search by title..." onkeyup="searchBooks()">
+        </section>
+
+        <section id="book-list-section">
+            <h2>Available Books</h2>
+            <div id="book-list"></div>
+        </section>
+
+        <section id="borrowed-books-section">
+            <h2>Borrowed Books</h2>
+            <div id="borrowed-books"></div>
+        </section>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
